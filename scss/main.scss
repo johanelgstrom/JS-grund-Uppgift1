@@ -1,0 +1,45 @@
+@import "mixins";
+
+html,
+body {
+  height: 100%;
+  font-size: 12pt;
+  .container-fluid {
+    .test {
+      background-color: $primarycolor;
+      color: $textcolor;
+      height: 100px;
+      width: 100%;
+    }
+    main {
+      height: 100vh;
+      color: $textcolor;
+      background-color: $backgroundcolor;
+      .box {
+        background-color: $boxcolor;
+        margin-top: 30px;
+        padding: 20px;
+        .large-btn {
+          margin-top: 10px;
+        }
+        label {
+          font-size: 1.3rem;
+        }
+        input {
+          margin-bottom: 10px;
+        }
+        ul {
+          width: 100%;
+          li {
+            list-style-type: none;
+            width: 100%;
+            padding-top: 10px;
+            button {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
