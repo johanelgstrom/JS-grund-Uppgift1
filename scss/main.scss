@@ -9,10 +9,9 @@ body {
       background-color: $primarycolor;
       color: $textcolor;
       height: 100px;
-      width: 100%;
     }
     main {
-      height: 100vh;
+      height: 100%;
       color: $textcolor;
       background-color: $backgroundcolor;
       .box {
@@ -41,5 +40,12 @@ body {
         }
       }
     }
+  }
+  // Added classes from js
+  .hide {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    padding-top: 0px !important;
   }
 }

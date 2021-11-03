@@ -33,6 +33,7 @@ window.onload = function() {
     function addHandeler1() {
         let newListItem = document.createElement("li")
         newListItem.className = "d-flex justify-content-between"
+        newListItem.id = "newItem1"
 
         let newDiv1 = document.createElement("div")
         newDiv1.className = "col-4 d-flex justify-content-center"
@@ -52,10 +53,12 @@ window.onload = function() {
         newDiv3.className = "col-4 d-flex justify-content-center"
 
         let newBtn1 = document.createElement("button")
+        newBtn1.id = "regret1"
         newBtn1.className = "btn btn-warning"
         newBtn1.innerHTML = "Ångra"
 
         let newBtn2 = document.createElement("button")
+        newBtn2.id = "removeAll1"
         newBtn2.className = "btn btn-danger"
         newBtn2.innerHTML = "Ta bort"
 
@@ -70,11 +73,15 @@ window.onload = function() {
         newDiv3.appendChild(newBtn2)
 
         let item = document.getElementById("item1");
-          item.remove();
+          item.classList.add("hide")
+          document.getElementById("regret1").addEventListener("click", regretHandeler1)
+          document.getElementById("removeAll1").addEventListener("click", removeAllHandeler1);
+    
     }
     function addHandeler2() {
         let newListItem = document.createElement("li")
         newListItem.className = "d-flex justify-content-between"
+        newListItem.id = "newItem2"
 
         let newDiv1 = document.createElement("div")
         newDiv1.className = "col-4 d-flex justify-content-center"
@@ -94,10 +101,12 @@ window.onload = function() {
         newDiv3.className = "col-4 d-flex justify-content-center"
 
         let newBtn1 = document.createElement("button")
+        newBtn1.id = "regret2"
         newBtn1.className = "btn btn-warning"
         newBtn1.innerHTML = "Ångra"
 
         let newBtn2 = document.createElement("button")
+        newBtn2.id = "removeAll2"
         newBtn2.className = "btn btn-danger"
         newBtn2.innerHTML = "Ta bort"
 
@@ -112,11 +121,14 @@ window.onload = function() {
         newDiv3.appendChild(newBtn2)
 
         let item = document.getElementById("item2");
-          item.remove();
+        item.classList.add("hide")
+        document.getElementById("regret2").addEventListener("click", regretHandeler2)
+        document.getElementById("removeAll2").addEventListener("click", removeAllHandeler2);
     }
     function addHandeler3() {
         let newListItem = document.createElement("li")
         newListItem.className = "d-flex justify-content-between"
+        newListItem.id = "newItem3"
 
         let newDiv1 = document.createElement("div")
         newDiv1.className = "col-4 d-flex justify-content-center"
@@ -136,10 +148,12 @@ window.onload = function() {
         newDiv3.className = "col-4 d-flex justify-content-center"
 
         let newBtn1 = document.createElement("button")
+        newBtn1.id = "regret3"
         newBtn1.className = "btn btn-warning"
         newBtn1.innerHTML = "Ångra"
 
         let newBtn2 = document.createElement("button")
+        newBtn2.id = "removeAll3"
         newBtn2.className = "btn btn-danger"
         newBtn2.innerHTML = "Ta bort"
 
@@ -154,11 +168,14 @@ window.onload = function() {
         newDiv3.appendChild(newBtn2)
 
         let item = document.getElementById("item3");
-          item.remove();
+        item.classList.add("hide")
+        document.getElementById("regret3").addEventListener("click", regretHandeler3)
+        document.getElementById("removeAll3").addEventListener("click", removeAllHandeler3);
     }
     function addHandeler4() {
         let newListItem = document.createElement("li")
         newListItem.className = "d-flex justify-content-between"
+        newListItem.id = "newItem4"
 
         let newDiv1 = document.createElement("div")
         newDiv1.className = "col-4 d-flex justify-content-center"
@@ -178,10 +195,12 @@ window.onload = function() {
         newDiv3.className = "col-4 d-flex justify-content-center"
 
         let newBtn1 = document.createElement("button")
+        newBtn1.id = "regret4"
         newBtn1.className = "btn btn-warning"
         newBtn1.innerHTML = "Ångra"
 
         let newBtn2 = document.createElement("button")
+        newBtn2.id = "removeAll4"
         newBtn2.className = "btn btn-danger"
         newBtn2.innerHTML = "Ta bort"
 
@@ -196,11 +215,14 @@ window.onload = function() {
         newDiv3.appendChild(newBtn2)
 
         let item = document.getElementById("item4");
-          item.remove();
+        item.classList.add("hide")
+        document.getElementById("regret4").addEventListener("click", regretHandeler4)
+        document.getElementById("removeAll4").addEventListener("click", removeAllHandeler4);
     }
     function addHandeler5() {
         let newListItem = document.createElement("li")
         newListItem.className = "d-flex justify-content-between"
+        newListItem.id = "newItem5"
 
         let newDiv1 = document.createElement("div")
         newDiv1.className = "col-4 d-flex justify-content-center"
@@ -220,10 +242,12 @@ window.onload = function() {
         newDiv3.className = "col-4 d-flex justify-content-center"
 
         let newBtn1 = document.createElement("button")
+        newBtn1.id = "regret5"
         newBtn1.className = "btn btn-warning"
         newBtn1.innerHTML = "Ångra"
 
         let newBtn2 = document.createElement("button")
+        newBtn2.id = "removeAll5"
         newBtn2.className = "btn btn-danger"
         newBtn2.innerHTML = "Ta bort"
 
@@ -238,7 +262,76 @@ window.onload = function() {
         newDiv3.appendChild(newBtn2)
 
         let item = document.getElementById("item5");
-          item.remove();
+        item.classList.add("hide")
+        document.getElementById("regret5").addEventListener("click", regretHandeler5)
+        document.getElementById("removeAll5").addEventListener("click", removeAllHandeler5);
+    }
+
+    function regretHandeler1() {
+      
+      let oldItem = document.getElementById("item1");
+          oldItem.classList.remove("hide")
+      let newItem = document.getElementById("newItem1")
+      newItem.remove();
+    }
+    function regretHandeler2() {
+      
+      let oldItem = document.getElementById("item2");
+          oldItem.classList.remove("hide")
+      let newItem = document.getElementById("newItem2")
+      newItem.remove();
+    }
+    function regretHandeler3() {
+      
+      let oldItem = document.getElementById("item3");
+          oldItem.classList.remove("hide")
+      let newItem = document.getElementById("newItem3")
+      newItem.remove();
+    }
+    function regretHandeler4() {
+      
+      let oldItem = document.getElementById("item4");
+          oldItem.classList.remove("hide")
+      let newItem = document.getElementById("newItem4")
+      newItem.remove();
+    }
+    function regretHandeler5() {
+      
+      let oldItem = document.getElementById("item5");
+          oldItem.classList.remove("hide")
+      let newItem = document.getElementById("newItem5")
+      newItem.remove();
+    }
+  
+    function removeAllHandeler1() {
+      let oldItem = document.getElementById("item1");
+      let newItem = document.getElementById("newItem1");
+      oldItem.remove();
+      newItem.remove();
+    }
+    function removeAllHandeler2() {
+      let oldItem = document.getElementById("item2");
+      let newItem = document.getElementById("newItem2");
+      oldItem.remove();
+      newItem.remove();
+    }
+    function removeAllHandeler3() {
+      let oldItem = document.getElementById("item3");
+      let newItem = document.getElementById("newItem3");
+      oldItem.remove();
+      newItem.remove();
+    }
+    function removeAllHandeler4() {
+      let oldItem = document.getElementById("item4");
+      let newItem = document.getElementById("newItem4");
+      oldItem.remove();
+      newItem.remove();
+    }
+    function removeAllHandeler5() {
+      let oldItem = document.getElementById("item5");
+      let newItem = document.getElementById("newItem5");
+      oldItem.remove();
+      newItem.remove();
     }
 
 
@@ -276,8 +369,6 @@ window.onload = function() {
 
 
 
-
-
       
       
       
@@ -325,9 +416,7 @@ window.onload = function() {
       
       
       
-      
-      
-      
+    
       
       
       
@@ -348,6 +437,3 @@ window.onload = function() {
           })
       })()
 }
-
-
-

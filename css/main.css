@@ -8,11 +8,10 @@ body .container-fluid .test {
   background-color: #741313;
   color: white;
   height: 100px;
-  width: 100%;
 }
 html .container-fluid main,
 body .container-fluid main {
-  height: 100vh;
+  height: 100%;
   color: white;
   background-color: black;
 }
@@ -47,6 +46,13 @@ body .container-fluid main .box ul li {
 html .container-fluid main .box ul li button,
 body .container-fluid main .box ul li button {
   margin-right: 10px;
+}
+html .hide,
+body .hide {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+  padding-top: 0px !important;
 }
 
 /*# sourceMappingURL=main.css.map */
