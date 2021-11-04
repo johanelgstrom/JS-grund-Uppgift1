@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
   font-size: 12pt;
 }
 html .container-fluid .test,
@@ -8,6 +9,7 @@ body .container-fluid .test {
   background-color: #741313;
   color: white;
   height: 100px;
+  margin: 0;
 }
 html .container-fluid main,
 body .container-fluid main {
