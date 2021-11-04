@@ -1,6 +1,8 @@
 window.onload = function() {
+
   let doneList = document.getElementById("donelist");
   let doList = document.getElementById("dolist");
+  
 
   document.getElementById("remove1").addEventListener("click", removeHandeler1)
   function removeHandeler1() {
@@ -34,18 +36,18 @@ window.onload = function() {
     newListItem.id = "newItem1"
 
     let newDiv1 = document.createElement("div")
-    newDiv1.className = "col-4 d-flex justify-content-center"
+    newDiv1.className = "col-4 d-flex justify-content-start align-items-center"
 
-    let newH41 = document.createElement("h4")
-    let oldH41 = document.getElementById("chore1").innerHTML
-    newH41.innerHTML = oldH41
+    let newH4 = document.createElement("h4")
+    let oldH4 = document.getElementById("chore1").innerHTML
+    newH4.innerHTML = oldH4
 
     let newDiv2 = document.createElement("div")
-    newDiv2.className = "col-4 d-flex justify-content-center"
+    newDiv2.className = "col-4 d-flex justify-content-center align-items-center"
 
-    let newH42 = document.createElement("h4")
-    let oldH42 = document.getElementById("prio1").innerHTML
-    newH42.innerHTML = oldH42
+    let newH5 = document.createElement("h5")
+    let oldH5 = document.getElementById("prio1").innerHTML
+    newH5.innerHTML = oldH5
 
     let newDiv3 = document.createElement("div")
     newDiv3.className = "col-4 d-flex justify-content-center"
@@ -63,9 +65,9 @@ window.onload = function() {
     let doneList = document.getElementById("donelist")
     doneList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
-    newDiv1.appendChild(newH41)
+    newDiv1.appendChild(newH4)
     newListItem.appendChild(newDiv2)
-    newDiv2.appendChild(newH42)
+    newDiv2.appendChild(newH5)
     newListItem.appendChild(newDiv3)
     newDiv3.appendChild(newBtn1)
     newDiv3.appendChild(newBtn2)
@@ -83,18 +85,18 @@ window.onload = function() {
     newListItem.id = "newItem2"
 
     let newDiv1 = document.createElement("div")
-    newDiv1.className = "col-4 d-flex justify-content-center"
+    newDiv1.className = "col-4 d-flex justify-content-start align-items-center"
 
-    let newH41 = document.createElement("h4")
-    let oldH41 = document.getElementById("chore2").innerHTML
-    newH41.innerHTML = oldH41
+    let newH4 = document.createElement("h4")
+    let oldH4 = document.getElementById("chore2").innerHTML
+    newH4.innerHTML = oldH4
 
     let newDiv2 = document.createElement("div")
-    newDiv2.className = "col-4 d-flex justify-content-center"
+    newDiv2.className = "col-4 d-flex justify-content-center align-items-center"
 
-    let newH42 = document.createElement("h4")
-    let oldH42 = document.getElementById("prio2").innerHTML
-    newH42.innerHTML = oldH42
+    let newH5 = document.createElement("h5")
+    let oldH5 = document.getElementById("prio2").innerHTML
+    newH5.innerHTML = oldH5
 
     let newDiv3 = document.createElement("div")
     newDiv3.className = "col-4 d-flex justify-content-center"
@@ -112,9 +114,9 @@ window.onload = function() {
     let doneList = document.getElementById("donelist")
     doneList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
-    newDiv1.appendChild(newH41)
+    newDiv1.appendChild(newH4)
     newListItem.appendChild(newDiv2)
-    newDiv2.appendChild(newH42)
+    newDiv2.appendChild(newH5)
     newListItem.appendChild(newDiv3)
     newDiv3.appendChild(newBtn1)
     newDiv3.appendChild(newBtn2)
@@ -131,18 +133,18 @@ window.onload = function() {
     newListItem.id = "newItem3"
 
     let newDiv1 = document.createElement("div")
-    newDiv1.className = "col-4 d-flex justify-content-center"
+    newDiv1.className = "col-4 d-flex justify-content-start align-items-center"
 
-    let newH41 = document.createElement("h4")
-    let oldH41 = document.getElementById("chore3").innerHTML
-    newH41.innerHTML = oldH41
+    let newH4 = document.createElement("h4")
+    let oldH4 = document.getElementById("chore3").innerHTML
+    newH4.innerHTML = oldH4
 
     let newDiv2 = document.createElement("div")
-    newDiv2.className = "col-4 d-flex justify-content-center"
+    newDiv2.className = "col-4 d-flex justify-content-center align-items-center"
 
-    let newH42 = document.createElement("h4")
-    let oldH42 = document.getElementById("prio3").innerHTML
-    newH42.innerHTML = oldH42
+    let newH5 = document.createElement("h5")
+    let oldH5 = document.getElementById("prio3").innerHTML
+    newH5.innerHTML = oldH5
 
     let newDiv3 = document.createElement("div")
     newDiv3.className = "col-4 d-flex justify-content-center"
@@ -160,9 +162,9 @@ window.onload = function() {
     let doneList = document.getElementById("donelist")
     doneList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
-    newDiv1.appendChild(newH41)
+    newDiv1.appendChild(newH4)
     newListItem.appendChild(newDiv2)
-    newDiv2.appendChild(newH42)
+    newDiv2.appendChild(newH5)
     newListItem.appendChild(newDiv3)
     newDiv3.appendChild(newBtn1)
     newDiv3.appendChild(newBtn2)
@@ -179,18 +181,18 @@ window.onload = function() {
     newListItem.id = "newItem4"
 
     let newDiv1 = document.createElement("div")
-    newDiv1.className = "col-4 d-flex justify-content-center"
+    newDiv1.className = "col-4 d-flex justify-content-start align-items-center"
 
-    let newH41 = document.createElement("h4")
-    let oldH41 = document.getElementById("chore4").innerHTML
-    newH41.innerHTML = oldH41
+    let newH4 = document.createElement("h4")
+    let oldH4 = document.getElementById("chore4").innerHTML
+    newH4.innerHTML = oldH4
 
     let newDiv2 = document.createElement("div")
-    newDiv2.className = "col-4 d-flex justify-content-center"
+    newDiv2.className = "col-4 d-flex justify-content-center align-items-center"
 
-    let newH42 = document.createElement("h4")
-    let oldH42 = document.getElementById("prio4").innerHTML
-    newH42.innerHTML = oldH42
+    let newH5 = document.createElement("h5")
+    let oldH5 = document.getElementById("prio4").innerHTML
+    newH5.innerHTML = oldH5
 
     let newDiv3 = document.createElement("div")
     newDiv3.className = "col-4 d-flex justify-content-center"
@@ -208,9 +210,9 @@ window.onload = function() {
     let doneList = document.getElementById("donelist")
     doneList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
-    newDiv1.appendChild(newH41)
+    newDiv1.appendChild(newH5)
     newListItem.appendChild(newDiv2)
-    newDiv2.appendChild(newH42)
+    newDiv2.appendChild(newH5)
     newListItem.appendChild(newDiv3)
     newDiv3.appendChild(newBtn1)
     newDiv3.appendChild(newBtn2)
@@ -227,18 +229,18 @@ window.onload = function() {
     newListItem.id = "newItem5"
 
     let newDiv1 = document.createElement("div")
-    newDiv1.className = "col-4 d-flex justify-content-center"
+    newDiv1.className = "col-4 d-flex justify-content-start align-items-center"
 
-    let newH41 = document.createElement("h4")
-    let oldH41 = document.getElementById("chore5").innerHTML
-    newH41.innerHTML = oldH41
+    let newH4 = document.createElement("h4")
+    let oldH4 = document.getElementById("chore5").innerHTML
+    newH4.innerHTML = oldH4
 
     let newDiv2 = document.createElement("div")
-    newDiv2.className = "col-4 d-flex justify-content-center"
+    newDiv2.className = "col-4 d-flex justify-content-center align-items-center"
 
-    let newH42 = document.createElement("h4")
-    let oldH42 = document.getElementById("prio5").innerHTML
-    newH42.innerHTML = oldH42
+    let newH5 = document.createElement("h5")
+    let oldH5 = document.getElementById("prio5").innerHTML
+    newH5.innerHTML = oldH5
 
     let newDiv3 = document.createElement("div")
     newDiv3.className = "col-4 d-flex justify-content-center"
@@ -256,9 +258,9 @@ window.onload = function() {
     let doneList = document.getElementById("donelist")
     doneList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
-    newDiv1.appendChild(newH41)
+    newDiv1.appendChild(newH4)
     newListItem.appendChild(newDiv2)
-    newDiv2.appendChild(newH42)
+    newDiv2.appendChild(newH5)
     newListItem.appendChild(newDiv3)
     newDiv3.appendChild(newBtn1)
     newDiv3.appendChild(newBtn2)
@@ -331,37 +333,25 @@ window.onload = function() {
     newItem.remove();
   }
   
-
   let choreBox = document.getElementById("chore");
   let priorityBox = document.getElementById("priority");
   document.getElementById("submit").addEventListener("click", addNewChoreHandeler)
 
   function addNewChoreHandeler() {
-    // console.log(choreBox.value)
-    // console.log(priorityBox.value)
-    // let testP = document.createElement("p")
-    // let testID = Math.random().toString(36).substr(2,9);
-    // testP.id = testID;
-    // testP.innerHTML = choreBox.value + priorityBox.value
-    // document.body.appendChild(testP)
-
     let newListItem = document.createElement("li");
     newListItem.className = "d-flex justify-content-between";
-    // newListItem.id = Math.random().toString(36).substr(2,9);
 
     let newDiv1 = document.createElement("div");
-    newDiv1.className = "col-4 d-flex justify-content-center";
+    newDiv1.className = "col-4 d-flex justify-content-start align-items-center";
 
-    let newH41 = document.createElement("h4");
-    newH41.innerHTML = choreBox.value;
-    // newH41.id = Math.random().toString(36).substr(2,9);
+    let newH4 = document.createElement("h4");
+    newH4.innerHTML = choreBox.value;
 
     let newDiv2 = document.createElement("div");
-    newDiv2.className = "col-4 d-flex justify-content-center";
+    newDiv2.className = "col-4 d-flex justify-content-center align-items-center";
 
-    let newH42 = document.createElement("h4");
-    newH42.innerHTML = "Prio "+ priorityBox.value;
-    // newH42.id = Math.random().toString(36).substr(2,9);
+    let newH5 = document.createElement("h5");
+    newH5.innerHTML = "Prio "+ priorityBox.value;
 
     let newDiv3 = document.createElement("div");
     newDiv3.className = "col-4 d-flex justify-content-center";
@@ -369,7 +359,6 @@ window.onload = function() {
     let newBtn1 = document.createElement("button");
     newBtn1.className = "btn btn-primary";
     newBtn1.innerHTML = "Klart"
-    // newBtn1.id = Math.random().toString(36).substr(2,9);
     newBtn1.addEventListener("click", addHandelerCustom)
     
 
@@ -383,9 +372,9 @@ window.onload = function() {
 
     doList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
-    newDiv1.appendChild(newH41)
+    newDiv1.appendChild(newH4)
     newListItem.appendChild(newDiv2)
-    newDiv2.appendChild(newH42)
+    newDiv2.appendChild(newH5)
     newListItem.appendChild(newDiv3)
     newDiv3.appendChild(newBtn1)
     newDiv3.appendChild(newBtn2)
@@ -398,19 +387,18 @@ window.onload = function() {
       newListItemRight.className = "d-flex justify-content-between"
   
       let newDiv1Right = document.createElement("div")
-      newDiv1Right.className = "col-4 d-flex justify-content-center"
+      newDiv1Right.className = "col-4 d-flex justify-content-start align-items-center"
   
-      document.getElementById(newH41);
-      let newH41Right = document.createElement("h4")
-      let oldH41Right = newH41.innerHTML;
-      newH41Right.innerHTML = oldH41Right
+      let newH4Right = document.createElement("h4")
+      let oldH4Right = newH4.innerHTML;
+      newH4Right.innerHTML = oldH4Right
   
       let newDiv2Right = document.createElement("div")
-      newDiv2Right.className = "col-4 d-flex justify-content-center"
+      newDiv2Right.className = "col-4 d-flex justify-content-center align-items-center"
   
-      let newH42Right = document.createElement("h4")
-      let oldH42Right = newH42.innerHTML;
-      newH42Right.innerHTML = oldH42Right
+      let newH5Right = document.createElement("h5")
+      let oldH5Right = newH5.innerHTML;
+      newH5Right.innerHTML = oldH5Right
   
       let newDiv3Right = document.createElement("div")
       newDiv3Right.className = "col-4 d-flex justify-content-center"
@@ -418,19 +406,17 @@ window.onload = function() {
       let newBtn1Right = document.createElement("button")
       newBtn1Right.className = "btn btn-warning"
       newBtn1Right.innerHTML = "Ångra"
-      // newBtn1Right.id = Math.random().toString(36).substr(2,9);
   
       let newBtn2Right = document.createElement("button")
       newBtn2Right.className = "btn btn-danger"
       newBtn2Right.innerHTML = "Ta bort"
-      // newBtn2Right.id = Math.random().toString(36).substr(2,9);
   
       let doneList = document.getElementById("donelist")
       doneList.appendChild(newListItemRight);
       newListItemRight.appendChild(newDiv1Right)
-      newDiv1Right.appendChild(newH41Right)
+      newDiv1Right.appendChild(newH4Right)
       newListItemRight.appendChild(newDiv2Right)
-      newDiv2Right.appendChild(newH42Right)
+      newDiv2Right.appendChild(newH5Right)
       newListItemRight.appendChild(newDiv3Right)
       newDiv3Right.appendChild(newBtn1Right)
       newDiv3Right.appendChild(newBtn2Right)
@@ -449,5 +435,31 @@ window.onload = function() {
         newListItemRight.remove();
       }
     } 
+  }
+  document.getElementById("sortbutton").addEventListener("click", sortHandeler) 
+}
+
+function sortHandeler() {
+  let list, i, switching, b, d, shouldSwitch;
+list = document.getElementById("dolist");
+switching = true;
+
+while (switching) {
+  switching = false;
+  b = list.getElementsByTagName("li");
+  d = list.getElementsByTagName("h4");
+
+  for (i = 0; i < (b.length - 1); i++) {
+    shouldSwitch = false;
+    
+    if (d[i].innerHTML.toLowerCase() > d[i + 1].innerHTML.toLowerCase()) {
+      shouldSwitch = true;
+      break;
+    }
+  }
+  if (shouldSwitch) {
+    b[i].parentNode.insertBefore(b[i + 1], b[i]);
+    switching = true;
+  }
   }
 }
