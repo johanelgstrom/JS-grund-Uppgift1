@@ -103,7 +103,8 @@
                             </ul>
                         </div>
                     </div>
-                    <button class="btn btn-primary w-100" id="sortbutton">Sortera i bokstavsordning</button>
+                    <button class="btn btn-primary w-100 m-1" id="alphbutton">Sortera i bokstavsordning</button>
+                    <button class="btn btn-secondary w-100 m-1" id="priobutton">Sortera i prioritetsordning</button>
                 </div>
                 <div class="box col-10 col-lg-5 border border-success">
                     <div class="row">
@@ -113,32 +114,8 @@
                             </h3>
                         </div>
                         <div class="col-12 d-flex justify-content-between">
-                            <!-- ITEM 1 -->
                             <ul class="d-flex flex-column justify-content-between" id="donelist">
-                                <!-- <li class="d-flex justify-content-between">
-                                    <div class="col-4 d-flex justify-content-center">
-                                        <h4>Sova</h4>
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-center">
-                                        <h4>Prio 1</h4>
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-center">
-                                        <button class="btn btn-warning" id="regret1">Ångra</button>
-                                        <button class="btn btn-danger" id="remove4">Ta bort</button>
-                                    </div>
-                                </li>
-                                <li class="d-flex justify-content-between">
-                                    <div class="col-4 d-flex justify-content-center">
-                                        <h4>Rensa avloppet</h4>
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-center">
-                                        <h4>Prio 3</h4>
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-center">
-                                        <button class="btn btn-warning">Ångra</button>
-                                        <button class="btn btn-danger">Ta bort</button>
-                                    </div>
-                                </li> -->
+                                
                             </ul>
                         </div>
                     </div>
@@ -155,7 +132,7 @@
                         <form class="row g-6 needs-validation justify-content-center" novalidate>
                             <div class="col-12 col-lg-4">
                                 <label for="chore" class="form-label">Syssla</label>
-                                <input type="text" class="form-control" id="chore" required>
+                                <input type="text" class="form-control" id="chore" placeholder="Till exempel 'Tvätta'" required>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <label for="priority" class="form-label">Prioritet</label>

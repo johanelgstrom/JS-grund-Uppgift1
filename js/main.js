@@ -210,7 +210,7 @@ window.onload = function() {
     let doneList = document.getElementById("donelist")
     doneList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
-    newDiv1.appendChild(newH5)
+    newDiv1.appendChild(newH4)
     newListItem.appendChild(newDiv2)
     newDiv2.appendChild(newH5)
     newListItem.appendChild(newDiv3)
@@ -436,10 +436,11 @@ window.onload = function() {
       }
     } 
   }
-  document.getElementById("sortbutton").addEventListener("click", sortHandeler) 
+  document.getElementById("alphbutton").addEventListener("click", alphSortHandeler)
+  document.getElementById("priobutton").addEventListener("click", prioSortHandeler) 
 }
 
-function sortHandeler() {
+function alphSortHandeler() {
   let list, i, switching, b, d, shouldSwitch;
 list = document.getElementById("dolist");
 switching = true;
@@ -448,6 +449,31 @@ while (switching) {
   switching = false;
   b = list.getElementsByTagName("li");
   d = list.getElementsByTagName("h4");
+
+  for (i = 0; i < (b.length - 1); i++) {
+    shouldSwitch = false;
+    
+    if (d[i].innerHTML.toLowerCase() > d[i + 1].innerHTML.toLowerCase()) {
+      shouldSwitch = true;
+      break;
+    }
+  }
+  if (shouldSwitch) {
+    b[i].parentNode.insertBefore(b[i + 1], b[i]);
+    switching = true;
+  }
+  }
+}
+
+function prioSortHandeler() {
+  let list, i, switching, b, d, shouldSwitch;
+list = document.getElementById("dolist");
+switching = true;
+
+while (switching) {
+  switching = false;
+  b = list.getElementsByTagName("li");
+  d = list.getElementsByTagName("h5");
 
   for (i = 0; i < (b.length - 1); i++) {
     shouldSwitch = false;
