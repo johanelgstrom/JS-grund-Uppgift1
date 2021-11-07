@@ -2,6 +2,7 @@ class Chore {
   constructor() {
     this.chore;
     this.priority;
+    this.isDone;
   }
 }
 
@@ -13,22 +14,27 @@ window.onload = function() {
   let c1 = {
     chore : "Tvätta",
     priority: "3",
+    isDone: false,
     };
   let c2 = {
     chore : "Laga mat",
     priority: "5",
+    isDone: false,
     };
   let c3 = {
     chore : "Diska",
     priority: "1",
+    isDone: false,
     };
   let c4 = {
     chore : "Dammsug",
     priority: "2",
+    isDone: false,
     };
   let c5 = {
     chore : "Matta katten",
     priority: "4",
+    isDone: false,
     };
     let listArray = [c1, c2, c3, c4, c5]
     for (let i = 0; i < listArray.length; i++) {
@@ -71,9 +77,13 @@ window.onload = function() {
     newDiv3.appendChild(newBtn2)
       
     function removeHandelerCustom() {
+      listArray.splice(i, 1, "This item is deleted")
+      console.log(listArray)
       newListItem.remove();
     }
     function addHandelerCustom() {
+      listArray[i].isDone = true;
+      console.log(listArray);
       let newListItemRight = document.createElement("li")
       newListItemRight.className = "d-flex justify-content-between"
   
@@ -119,10 +129,13 @@ window.onload = function() {
       newBtn2Right.addEventListener("click", removeAllHandelerCustom);
 
       function removeAllHandelerCustom() {
+        listArray.splice(i, 1, "This item is deleted")
+
         newListItem.remove();
         newListItemRight.remove();
       }
       function regretHandelerCustom() {
+        listArray[i].isDone = false;
         newListItem.classList.remove("hide")
         newListItemRight.remove();
       }
@@ -136,8 +149,9 @@ window.onload = function() {
   function addNewChoreHandeler() {
 
     let cNewItem = {
-      chore : choreBox.value,
+      chore: choreBox.value,
       priority: priorityBox.value,
+      isDone: false
       };
       listArray.push(cNewItem);
       console.log(listArray)
@@ -185,8 +199,13 @@ window.onload = function() {
 
     function removeHandelerCustom() {
       newListItem.remove();
+
+      let itemToRemove = listArray.indexOf(cNewItem)
+      listArray.splice(itemToRemove, 1, "This item is deleted")
     }
     function addHandelerCustom() {
+      cNewItem.isDone = true;
+      console.log(listArray)
       let newListItemRight = document.createElement("li")
       newListItemRight.className = "d-flex justify-content-between"
   
@@ -231,10 +250,15 @@ window.onload = function() {
       newBtn2Right.addEventListener("click", removeAllHandelerCustom);
 
       function removeAllHandelerCustom() {
+        let itemToRemove = listArray.indexOf(cNewItem)
+        listArray.splice(itemToRemove, 1, "This item is deleted")
+
         newListItem.remove();
         newListItemRight.remove();
       }
       function regretHandelerCustom() {
+        cNewItem.isDone = false;
+        console.log(listArray)
         newListItem.classList.remove("hide")
         newListItemRight.remove();
       }
