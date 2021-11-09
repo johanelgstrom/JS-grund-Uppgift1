@@ -3,8 +3,8 @@ body {
   height: 100%;
   font-size: 12pt;
 }
-html .container-fluid .test,
-body .container-fluid .test {
+html .container-fluid .header,
+body .container-fluid .header {
   background-color: #741313;
   color: white;
   height: 100px;
@@ -14,6 +14,10 @@ body .container-fluid main {
   height: 100%;
   color: white;
   background-color: black;
+}
+html .container-fluid main .doneBox,
+body .container-fluid main .doneBox {
+  font-size: 2rem;
 }
 html .container-fluid main .box,
 body .container-fluid main .box {
@@ -48,12 +52,51 @@ html .container-fluid main .box ul li button,
 body .container-fluid main .box ul li button {
   margin-right: 10px;
 }
+html .container-fluid .success,
+body .container-fluid .success {
+  animation: bg-color 5s linear infinite;
+}
 html .hide,
 body .hide {
   visibility: hidden;
   height: 0px;
   width: 0px;
   padding-top: 0px !important;
+}
+@keyframes bg-color {
+  0% {
+    background-color: red;
+  }
+  10% {
+    background-color: #ff9900;
+  }
+  20% {
+    background-color: #b3ff00;
+  }
+  30% {
+    background-color: #1eff00;
+  }
+  40% {
+    background-color: #00ff88;
+  }
+  50% {
+    background-color: aqua;
+  }
+  60% {
+    background-color: #006eff;
+  }
+  70% {
+    background-color: #4400ff;
+  }
+  80% {
+    background-color: #b700ff;
+  }
+  90% {
+    background-color: #ff006a;
+  }
+  100% {
+    background-color: red;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

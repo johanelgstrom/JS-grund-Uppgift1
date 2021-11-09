@@ -6,10 +6,20 @@ class Chore {
   }
 }
 
+
+
 window.onload = function() {
 
   let doneList = document.getElementById("donelist");
   let doList = document.getElementById("dolist");
+  let doneNumber = 0;
+  let totalNumber = 5;
+
+  let doneWrapper = document.getElementById("doneWrapper")
+  let doneDiv = document.createElement("div");
+  doneDiv.className = "col-10 d-flex justify-content-center align-items-center border border-warning box doneBox"
+  doneWrapper.appendChild(doneDiv);
+  
 
   let c1 = {
     chore : "Tvätta",
@@ -37,6 +47,7 @@ window.onload = function() {
     isDone: false,
     };
     let listArray = [c1, c2, c3, c4, c5]
+    
     for (let i = 0; i < listArray.length; i++) {
       let newListItem = document.createElement("li");
     newListItem.className = "d-flex justify-content-between";
@@ -58,14 +69,20 @@ window.onload = function() {
 
     let newBtn1 = document.createElement("button");
     newBtn1.className = "btn btn-primary";
-    newBtn1.innerHTML = "Klart"
-    newBtn1.addEventListener("click", addHandelerCustom)
+    let checkIcon = document.createElement("i");
+    checkIcon.className = "fas fa-check"
+    newBtn1.appendChild(checkIcon);
+    // newBtn1.innerHTML = "Klart"
+    newBtn1.addEventListener("click", addHandeler)
     
 
     let newBtn2 = document.createElement("button");
     newBtn2.className = "btn btn-danger";
-    newBtn2.innerHTML = "Ta bort"
-    newBtn2.addEventListener("click", removeHandelerCustom)
+    let removeIcon = document.createElement("i");
+    removeIcon.className ="fas fa-trash-alt"
+    newBtn2.appendChild(removeIcon);
+    // newBtn2.innerHTML = "Ta bort"
+    newBtn2.addEventListener("click", removeHandeler)
 
     doList.appendChild(newListItem);
     newListItem.appendChild(newDiv1)
@@ -75,15 +92,35 @@ window.onload = function() {
     newListItem.appendChild(newDiv3)
     newDiv3.appendChild(newBtn1)
     newDiv3.appendChild(newBtn2)
+
+    function removeHandeler() {
+      console.log(listArray[0].chore)
+      for (let index = 0; index < listArray.length; index++) {
+        if (listArray[index].chore === newH4.innerHTML) {
+          console.log("grattis")
+          listArray.splice(index, 1)
+          console.log(listArray)
+        }
+      }
       
-    function removeHandelerCustom() {
-      listArray.splice(i, 1, "This item is deleted")
-      console.log(listArray)
+     
+      
+    
+      
+      
+      
       newListItem.remove();
+      totalNumber--;
+      amountDone();
     }
-    function addHandelerCustom() {
+    
+      
+    function addHandeler() {
       listArray[i].isDone = true;
       console.log(listArray);
+      doneNumber++;
+      console.log(doneNumber)
+      amountDone();
       let newListItemRight = document.createElement("li")
       newListItemRight.className = "d-flex justify-content-between"
   
@@ -106,11 +143,17 @@ window.onload = function() {
   
       let newBtn1Right = document.createElement("button")
       newBtn1Right.className = "btn btn-warning"
-      newBtn1Right.innerHTML = "Ångra"
+      // newBtn1Right.innerHTML = "Ångra"
+      let redoIcon = document.createElement("i");
+      redoIcon.className = "fas fa-undo";
+      newBtn1Right.appendChild(redoIcon);
   
       let newBtn2Right = document.createElement("button")
       newBtn2Right.className = "btn btn-danger"
-      newBtn2Right.innerHTML = "Ta bort"
+      let removeIconRight = document.createElement("i");
+      removeIconRight.className ="fas fa-trash-alt"
+      newBtn2Right.appendChild(removeIconRight);
+      // newBtn2Right.innerHTML = "Ta bort"
       
   
       let doneList = document.getElementById("donelist")
@@ -125,23 +168,51 @@ window.onload = function() {
   
       document.getElementById(newListItem)
       newListItem.classList.add("hide")
-      newBtn1Right.addEventListener("click", regretHandelerCustom)
-      newBtn2Right.addEventListener("click", removeAllHandelerCustom);
+      newBtn1Right.addEventListener("click", regretHandeler)
+      newBtn2Right.addEventListener("click", removeAllHandeler);
 
-      function removeAllHandelerCustom() {
-        listArray.splice(i, 1, "This item is deleted")
+      function removeAllHandeler() {
+        console.log(listArray[0].chore)
+      for (let index = 0; index < listArray.length; index++) {
+        if (listArray[index].chore === newH4.innerHTML) {
+          console.log("grattis")
+          listArray.splice(index, 1)
+          console.log(listArray)
+        }
+      }
 
         newListItem.remove();
         newListItemRight.remove();
+        doneNumber--;
+        totalNumber--;
+        amountDone();
       }
-      function regretHandelerCustom() {
+      function regretHandeler() {
         listArray[i].isDone = false;
         newListItem.classList.remove("hide")
         newListItemRight.remove();
+        doneNumber--;
+        amountDone();
       }
     }
     }
-  
+    
+
+  function amountDone() {
+  doneDiv.innerHTML = "Du har gjort klart " + doneNumber + "/" + totalNumber;
+  let main = document.getElementById("main");
+  main.classList.remove("success");
+  if (doneNumber === totalNumber) {
+    doneDiv.innerHTML = "Du har gjort klart " + doneNumber + "/" + totalNumber + ". Bra jobbat!"
+    main.className = "success";
+  }
+  if (totalNumber === 0) {
+    doneDiv.innerHTML = "Har du saker att göra? Lägg till i formuläret nedan"
+    main.className = "";
+  }
+  }
+  amountDone();
+
   let choreBox = document.getElementById("chore");
   let priorityBox = document.getElementById("priority");
   document.getElementById("submit").addEventListener("click", addNewChoreHandeler)
@@ -154,7 +225,9 @@ window.onload = function() {
       isDone: false
       };
       listArray.push(cNewItem);
-      console.log(listArray)
+      console.log(listArray.length)
+      totalNumber++;
+      amountDone();
       
     let newListItem = document.createElement("li");
     newListItem.className = "d-flex justify-content-between";
@@ -176,13 +249,19 @@ window.onload = function() {
 
     let newBtn1 = document.createElement("button");
     newBtn1.className = "btn btn-primary";
-    newBtn1.innerHTML = "Klart"
+    let checkIcon = document.createElement("i");
+    checkIcon.className = "fas fa-check"
+    newBtn1.appendChild(checkIcon);
+    // newBtn1.innerHTML = "Klart"
     newBtn1.addEventListener("click", addHandelerCustom)
     
 
     let newBtn2 = document.createElement("button");
     newBtn2.className = "btn btn-danger";
-    newBtn2.innerHTML = "Ta bort"
+    let removeIcon = document.createElement("i");
+    removeIcon.className ="fas fa-trash-alt"
+    newBtn2.appendChild(removeIcon);
+    // newBtn2.innerHTML = "Ta bort"
     newBtn2.addEventListener("click", removeHandelerCustom)
 
     choreBox.value = ""
@@ -198,14 +277,27 @@ window.onload = function() {
     newDiv3.appendChild(newBtn2)
 
     function removeHandelerCustom() {
+      console.log(listArray[0].chore)
+      for (let index = 0; index < listArray.length; index++) {
+        if (listArray[index].chore === newH4.innerHTML) {
+          console.log("grattis")
+          listArray.splice(index, 1)
+          console.log(listArray)
+        }
+      }
       newListItem.remove();
+      totalNumber--;
+      amountDone();
 
-      let itemToRemove = listArray.indexOf(cNewItem)
-      listArray.splice(itemToRemove, 1, "This item is deleted")
+      // let itemToRemove = listArray.indexOf(cNewItem)
+      // listArray.splice(itemToRemove, 1, "This item is deleted")
     }
     function addHandelerCustom() {
       cNewItem.isDone = true;
       console.log(listArray)
+      doneNumber++;
+      console.log(doneNumber)
+      amountDone();
       let newListItemRight = document.createElement("li")
       newListItemRight.className = "d-flex justify-content-between"
   
@@ -228,11 +320,17 @@ window.onload = function() {
   
       let newBtn1Right = document.createElement("button")
       newBtn1Right.className = "btn btn-warning"
-      newBtn1Right.innerHTML = "Ångra"
+      let redoIcon = document.createElement("i");
+      redoIcon.className = "fas fa-undo";
+      newBtn1Right.appendChild(redoIcon);
+      // newBtn1Right.innerHTML = "Ångra"
   
       let newBtn2Right = document.createElement("button")
       newBtn2Right.className = "btn btn-danger"
-      newBtn2Right.innerHTML = "Ta bort"
+      let removeIconRight = document.createElement("i");
+      removeIconRight.className ="fas fa-trash-alt"
+      newBtn2Right.appendChild(removeIconRight);
+      // newBtn2Right.innerHTML = "Ta bort"
   
       let doneList = document.getElementById("donelist")
       doneList.appendChild(newListItemRight);
@@ -250,8 +348,14 @@ window.onload = function() {
       newBtn2Right.addEventListener("click", removeAllHandelerCustom);
 
       function removeAllHandelerCustom() {
-        let itemToRemove = listArray.indexOf(cNewItem)
-        listArray.splice(itemToRemove, 1, "This item is deleted")
+      for (let index = 0; index < listArray.length; index++) {
+        if (listArray[index].chore === newH4.innerHTML) {
+          listArray.splice(index, 1)
+        }
+      }
+        doneNumber--;
+        totalNumber--;
+        amountDone();
 
         newListItem.remove();
         newListItemRight.remove();
@@ -261,6 +365,8 @@ window.onload = function() {
         console.log(listArray)
         newListItem.classList.remove("hide")
         newListItemRight.remove();
+        doneNumber--;
+        amountDone();
       }
     } 
   }
