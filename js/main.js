@@ -116,8 +116,14 @@ window.onload = function() {
     
       
     function addHandeler() {
-      listArray[i].isDone = true;
-      console.log(listArray);
+      if (listArray[i] == undefined) {
+        listArray[0].isDone = true;
+        console.log(listArray[0])
+      } else {
+        listArray[i].isDone = true;
+        console.log(listArray[i])
+      }
+      
       doneNumber++;
       console.log(doneNumber)
       amountDone();
