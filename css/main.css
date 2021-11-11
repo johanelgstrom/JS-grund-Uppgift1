@@ -1,5 +1,6 @@
 html,
 body {
+  min-height: 100vh;
   height: 100%;
   font-size: 12pt;
 }
@@ -11,6 +12,7 @@ body .container-fluid .header {
 }
 html .container-fluid main,
 body .container-fluid main {
+  min-height: 100vh;
   height: 100%;
   color: white;
   background-color: black;
